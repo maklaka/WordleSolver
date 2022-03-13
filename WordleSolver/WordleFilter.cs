@@ -49,19 +49,19 @@ namespace WordleSolver
             return ret;
         }
     }
-    internal class WordleCommand
+    internal class WordleFilter
     {
         int Position;
         char Letter;
         IExecutableCmd Command;
 
-        public WordleCommand(string InputCommand)
+        public WordleFilter(string InputCommand)
         {
-            this.Letter = (char)(InputCommand[0] + 32);
+            this.Letter = (char)(InputCommand[0]);
 
-            if (InputCommand[1] == 'R')
+            if (InputCommand[1] == 'r')
                 this.Command = new WCmdRed();
-            else if (InputCommand[1] == 'Y')
+            else if (InputCommand[1] == 'y')
             {
                 this.Command = new WCmdYellow();
                 this.Position = InputCommand[2] - 48;
@@ -73,7 +73,7 @@ namespace WordleSolver
             }
         }
 
-        public bool RunCommand(string Word)
+        public bool RunFilterTest(string Word)
         {
             return this.Command.RunCommand(Word, this.Letter, this.Position);
         }

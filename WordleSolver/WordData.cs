@@ -13,7 +13,7 @@ namespace WordleSolver
         string wordText;
         int prevalance;
         List<char> RemainingLetters;
-        HashSet<char> UniqueLetters;
+        public HashSet<char> UniqueLetters;
         int uniqueCharsInAlphabet;
         int letterFreqScore;
 
@@ -21,7 +21,7 @@ namespace WordleSolver
         {
             wordText = Word;
             prevalance = Pre;
-            UniqueLetters = new HashSet<char>(Word);
+            UniqueLetters = new HashSet<char>(Word); //Get the set of unique letters, no repeats
             RemainingLetters = Alpha;
 
             LetterFrequencies = new Dictionary<char, int>()
@@ -51,7 +51,7 @@ namespace WordleSolver
 
 
         }
-        public static int SortByKillableLetters(WordData a, WordData b)
+        public static int SortByLetterFrequency(WordData a, WordData b)
         {
             if (a.uniqueCharsInAlphabet < b.uniqueCharsInAlphabet)
             {
@@ -67,7 +67,7 @@ namespace WordleSolver
                 {
                     return 1;
                 }
-                else if(a.letterFreqScore > b.letterFreqScore)
+                else if (a.letterFreqScore > b.letterFreqScore)
                 {
                     return -1;
                 }
@@ -76,7 +76,7 @@ namespace WordleSolver
             }
         }
 
-        public static int SortByPrevalence(WordData a, WordData b)
+        public static int SortByPopularity(WordData a, WordData b)
         {
             if (a.prevalance < b.prevalance)
             {
@@ -92,7 +92,7 @@ namespace WordleSolver
             }
         }
 
-        public string WordText { get => wordText;}
+        public string Text { get => wordText;}
 
     }
 }

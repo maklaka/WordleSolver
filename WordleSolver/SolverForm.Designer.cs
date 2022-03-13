@@ -1,6 +1,6 @@
 ﻿namespace WordleSolver
 {
-    partial class Form1
+    partial class SolverForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -59,15 +59,18 @@
             this.ltr2 = new System.Windows.Forms.Label();
             this.ltr3 = new System.Windows.Forms.Label();
             this.ltr4 = new System.Windows.Forms.Label();
-            this.lsbVocabWords = new System.Windows.Forms.ListBox();
+            this.lsbTargetPopularity = new System.Windows.Forms.ListBox();
             this.lblTypeListed = new System.Windows.Forms.Label();
             this.lblRemain = new System.Windows.Forms.Label();
-            this.radWordPrev = new System.Windows.Forms.RadioButton();
-            this.radLettersKilled = new System.Windows.Forms.RadioButton();
-            this.lsbLetterKillWords = new System.Windows.Forms.ListBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radWordPopularity = new System.Windows.Forms.RadioButton();
+            this.radLetterFrequency = new System.Windows.Forms.RadioButton();
+            this.lsbLetterFrequency = new System.Windows.Forms.ListBox();
+            this.radDeductivity = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lsbDeductivity = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ltrA
@@ -548,6 +551,7 @@
             this.ltr0.Name = "ltr0";
             this.ltr0.Size = new System.Drawing.Size(100, 100);
             this.ltr0.TabIndex = 26;
+            this.ltr0.Tag = "TargetLetter";
             this.ltr0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ltr0.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbl_DragDrop);
             this.ltr0.DragOver += new System.Windows.Forms.DragEventHandler(this.lbl_DragOver);
@@ -562,6 +566,7 @@
             this.ltr1.Name = "ltr1";
             this.ltr1.Size = new System.Drawing.Size(100, 100);
             this.ltr1.TabIndex = 27;
+            this.ltr1.Tag = "TargetLetter";
             this.ltr1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ltr1.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbl_DragDrop);
             this.ltr1.DragOver += new System.Windows.Forms.DragEventHandler(this.lbl_DragOver);
@@ -576,6 +581,7 @@
             this.ltr2.Name = "ltr2";
             this.ltr2.Size = new System.Drawing.Size(100, 100);
             this.ltr2.TabIndex = 28;
+            this.ltr2.Tag = "TargetLetter";
             this.ltr2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ltr2.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbl_DragDrop);
             this.ltr2.DragOver += new System.Windows.Forms.DragEventHandler(this.lbl_DragOver);
@@ -590,6 +596,7 @@
             this.ltr3.Name = "ltr3";
             this.ltr3.Size = new System.Drawing.Size(100, 100);
             this.ltr3.TabIndex = 29;
+            this.ltr3.Tag = "TargetLetter";
             this.ltr3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ltr3.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbl_DragDrop);
             this.ltr3.DragOver += new System.Windows.Forms.DragEventHandler(this.lbl_DragOver);
@@ -604,20 +611,21 @@
             this.ltr4.Name = "ltr4";
             this.ltr4.Size = new System.Drawing.Size(100, 100);
             this.ltr4.TabIndex = 30;
+            this.ltr4.Tag = "TargetLetter";
             this.ltr4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ltr4.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbl_DragDrop);
             this.ltr4.DragOver += new System.Windows.Forms.DragEventHandler(this.lbl_DragOver);
             // 
-            // lsbVocabWords
+            // lsbTargetPopularity
             // 
-            this.lsbVocabWords.FormattingEnabled = true;
-            this.lsbVocabWords.HorizontalScrollbar = true;
-            this.lsbVocabWords.ItemHeight = 15;
-            this.lsbVocabWords.Location = new System.Drawing.Point(23, 273);
-            this.lsbVocabWords.MultiColumn = true;
-            this.lsbVocabWords.Name = "lsbVocabWords";
-            this.lsbVocabWords.Size = new System.Drawing.Size(660, 304);
-            this.lsbVocabWords.TabIndex = 31;
+            this.lsbTargetPopularity.FormattingEnabled = true;
+            this.lsbTargetPopularity.HorizontalScrollbar = true;
+            this.lsbTargetPopularity.ItemHeight = 15;
+            this.lsbTargetPopularity.Location = new System.Drawing.Point(23, 273);
+            this.lsbTargetPopularity.MultiColumn = true;
+            this.lsbTargetPopularity.Name = "lsbTargetPopularity";
+            this.lsbTargetPopularity.Size = new System.Drawing.Size(660, 304);
+            this.lsbTargetPopularity.TabIndex = 31;
             // 
             // lblTypeListed
             // 
@@ -637,54 +645,55 @@
             this.lblRemain.Name = "lblRemain";
             this.lblRemain.Size = new System.Drawing.Size(218, 33);
             this.lblRemain.TabIndex = 33;
-            this.lblRemain.Text = "55";
+            this.lblRemain.Text = "0";
             this.lblRemain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // radWordPrev
+            // radWordPopularity
             // 
-            this.radWordPrev.AutoSize = true;
-            this.radWordPrev.Checked = true;
-            this.radWordPrev.Location = new System.Drawing.Point(23, 583);
-            this.radWordPrev.Name = "radWordPrev";
-            this.radWordPrev.Size = new System.Drawing.Size(341, 19);
-            this.radWordPrev.TabIndex = 34;
-            this.radWordPrev.TabStop = true;
-            this.radWordPrev.Text = "All Remaining Possible Target Words By Universal Popularity";
-            this.radWordPrev.UseVisualStyleBackColor = true;
-            this.radWordPrev.Click += new System.EventHandler(this.radClicked);
+            this.radWordPopularity.AutoSize = true;
+            this.radWordPopularity.Checked = true;
+            this.radWordPopularity.Location = new System.Drawing.Point(23, 583);
+            this.radWordPopularity.Name = "radWordPopularity";
+            this.radWordPopularity.Size = new System.Drawing.Size(341, 19);
+            this.radWordPopularity.TabIndex = 34;
+            this.radWordPopularity.TabStop = true;
+            this.radWordPopularity.Text = "All Remaining Possible Target Words By Universal Popularity";
+            this.radWordPopularity.UseVisualStyleBackColor = true;
+            this.radWordPopularity.Click += new System.EventHandler(this.radClicked);
             // 
-            // radLettersKilled
+            // radLetterFrequency
             // 
-            this.radLettersKilled.AutoSize = true;
-            this.radLettersKilled.Location = new System.Drawing.Point(23, 634);
-            this.radLettersKilled.Name = "radLettersKilled";
-            this.radLettersKilled.Size = new System.Drawing.Size(373, 19);
-            this.radLettersKilled.TabIndex = 35;
-            this.radLettersKilled.Text = "Show Highest Rated Deductive Guesses by Unused Popular Letters";
-            this.radLettersKilled.UseVisualStyleBackColor = true;
-            this.radLettersKilled.Click += new System.EventHandler(this.radClicked);
+            this.radLetterFrequency.AutoSize = true;
+            this.radLetterFrequency.Location = new System.Drawing.Point(23, 634);
+            this.radLetterFrequency.Name = "radLetterFrequency";
+            this.radLetterFrequency.Size = new System.Drawing.Size(373, 19);
+            this.radLetterFrequency.TabIndex = 35;
+            this.radLetterFrequency.Text = "Show Highest Rated Deductive Guesses by Unused Popular Letters";
+            this.radLetterFrequency.UseVisualStyleBackColor = true;
+            this.radLetterFrequency.Click += new System.EventHandler(this.radClicked);
             // 
-            // lsbLetterKillWords
+            // lsbLetterFrequency
             // 
-            this.lsbLetterKillWords.FormattingEnabled = true;
-            this.lsbLetterKillWords.HorizontalScrollbar = true;
-            this.lsbLetterKillWords.ItemHeight = 15;
-            this.lsbLetterKillWords.Location = new System.Drawing.Point(19, 273);
-            this.lsbLetterKillWords.MultiColumn = true;
-            this.lsbLetterKillWords.Name = "lsbLetterKillWords";
-            this.lsbLetterKillWords.Size = new System.Drawing.Size(672, 304);
-            this.lsbLetterKillWords.TabIndex = 36;
-            this.lsbLetterKillWords.Visible = false;
+            this.lsbLetterFrequency.FormattingEnabled = true;
+            this.lsbLetterFrequency.HorizontalScrollbar = true;
+            this.lsbLetterFrequency.ItemHeight = 15;
+            this.lsbLetterFrequency.Location = new System.Drawing.Point(19, 273);
+            this.lsbLetterFrequency.MultiColumn = true;
+            this.lsbLetterFrequency.Name = "lsbLetterFrequency";
+            this.lsbLetterFrequency.Size = new System.Drawing.Size(672, 304);
+            this.lsbLetterFrequency.TabIndex = 36;
+            this.lsbLetterFrequency.Visible = false;
             // 
-            // radioButton1
+            // radDeductivity
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(23, 609);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(323, 19);
-            this.radioButton1.TabIndex = 37;
-            this.radioButton1.Text = "Show Only Most Deductive Guesses Within Target Words";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radDeductivity.AutoSize = true;
+            this.radDeductivity.Location = new System.Drawing.Point(23, 609);
+            this.radDeductivity.Name = "radDeductivity";
+            this.radDeductivity.Size = new System.Drawing.Size(323, 19);
+            this.radDeductivity.TabIndex = 37;
+            this.radDeductivity.Text = "Show Only Most Deductive Guesses Within Target Words";
+            this.radDeductivity.UseVisualStyleBackColor = true;
+            this.radDeductivity.Click += new System.EventHandler(this.radClicked);
             // 
             // label1
             // 
@@ -709,20 +718,57 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Help_MouseClick);
             // 
-            // Form1
+            // lsbDeductivity
+            // 
+            this.lsbDeductivity.FormattingEnabled = true;
+            this.lsbDeductivity.HorizontalScrollbar = true;
+            this.lsbDeductivity.ItemHeight = 15;
+            this.lsbDeductivity.Location = new System.Drawing.Point(19, 273);
+            this.lsbDeductivity.MultiColumn = true;
+            this.lsbDeductivity.Name = "lsbDeductivity";
+            this.lsbDeductivity.Size = new System.Drawing.Size(672, 304);
+            this.lsbDeductivity.TabIndex = 40;
+            this.lsbDeductivity.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(240, 314);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(226, 33);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Targets Remaining";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(417, 619);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(274, 33);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "Most Deductive Word:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // SolverForm
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 661);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lsbDeductivity);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.lsbLetterKillWords);
-            this.Controls.Add(this.radLettersKilled);
-            this.Controls.Add(this.radWordPrev);
+            this.Controls.Add(this.radDeductivity);
+            this.Controls.Add(this.lsbLetterFrequency);
+            this.Controls.Add(this.radLetterFrequency);
+            this.Controls.Add(this.radWordPopularity);
             this.Controls.Add(this.lblRemain);
             this.Controls.Add(this.lblTypeListed);
-            this.Controls.Add(this.lsbVocabWords);
+            this.Controls.Add(this.lsbTargetPopularity);
             this.Controls.Add(this.ltr4);
             this.Controls.Add(this.ltr3);
             this.Controls.Add(this.ltr2);
@@ -755,7 +801,7 @@
             this.Controls.Add(this.ltrB);
             this.Controls.Add(this.ltrA);
             this.Controls.Add(this.label2);
-            this.Name = "Form1";
+            this.Name = "SolverForm";
             this.Text = "Wordle Solver";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.Form1_DragOver);
@@ -797,14 +843,17 @@
         private Label ltr2;
         private Label ltr3;
         private Label ltr4;
-        private ListBox lsbVocabWords;
+        private ListBox lsbTargetPopularity;
         private Label lblTypeListed;
         private Label lblRemain;
-        private RadioButton radWordPrev;
-        private RadioButton radLettersKilled;
-        private ListBox lsbLetterKillWords;
-        private RadioButton radioButton1;
+        private RadioButton radWordPopularity;
+        private RadioButton radLetterFrequency;
+        private ListBox lsbLetterFrequency;
+        private RadioButton radDeductivity;
         private Label label1;
         private Label label2;
+        private ListBox lsbDeductivity;
+        private Label label3;
+        private Label label4;
     }
 }
