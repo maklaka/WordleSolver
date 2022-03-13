@@ -65,6 +65,9 @@
             this.radWordPrev = new System.Windows.Forms.RadioButton();
             this.radLettersKilled = new System.Windows.Forms.RadioButton();
             this.lsbLetterKillWords = new System.Windows.Forms.ListBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ltrA
@@ -75,7 +78,7 @@
             this.ltrA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrA.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrA.Location = new System.Drawing.Point(48, 25);
+            this.ltrA.Location = new System.Drawing.Point(19, 32);
             this.ltrA.Name = "ltrA";
             this.ltrA.Size = new System.Drawing.Size(32, 40);
             this.ltrA.TabIndex = 0;
@@ -93,7 +96,7 @@
             this.ltrB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrB.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrB.Location = new System.Drawing.Point(97, 25);
+            this.ltrB.Location = new System.Drawing.Point(68, 32);
             this.ltrB.Name = "ltrB";
             this.ltrB.Size = new System.Drawing.Size(32, 40);
             this.ltrB.TabIndex = 1;
@@ -111,7 +114,7 @@
             this.ltrC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrC.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrC.Location = new System.Drawing.Point(146, 25);
+            this.ltrC.Location = new System.Drawing.Point(117, 32);
             this.ltrC.Name = "ltrC";
             this.ltrC.Size = new System.Drawing.Size(32, 40);
             this.ltrC.TabIndex = 2;
@@ -129,7 +132,7 @@
             this.ltrD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrD.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrD.Location = new System.Drawing.Point(196, 25);
+            this.ltrD.Location = new System.Drawing.Point(167, 32);
             this.ltrD.Name = "ltrD";
             this.ltrD.Size = new System.Drawing.Size(32, 40);
             this.ltrD.TabIndex = 3;
@@ -147,7 +150,7 @@
             this.ltrE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrE.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrE.Location = new System.Drawing.Point(244, 25);
+            this.ltrE.Location = new System.Drawing.Point(215, 32);
             this.ltrE.Name = "ltrE";
             this.ltrE.Size = new System.Drawing.Size(32, 40);
             this.ltrE.TabIndex = 4;
@@ -165,7 +168,7 @@
             this.ltrF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrF.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrF.Location = new System.Drawing.Point(293, 25);
+            this.ltrF.Location = new System.Drawing.Point(264, 32);
             this.ltrF.Name = "ltrF";
             this.ltrF.Size = new System.Drawing.Size(32, 40);
             this.ltrF.TabIndex = 5;
@@ -183,7 +186,7 @@
             this.ltrG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrG.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrG.Location = new System.Drawing.Point(342, 25);
+            this.ltrG.Location = new System.Drawing.Point(313, 32);
             this.ltrG.Name = "ltrG";
             this.ltrG.Size = new System.Drawing.Size(32, 40);
             this.ltrG.TabIndex = 6;
@@ -201,7 +204,7 @@
             this.ltrH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrH.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrH.Location = new System.Drawing.Point(391, 25);
+            this.ltrH.Location = new System.Drawing.Point(362, 32);
             this.ltrH.Name = "ltrH";
             this.ltrH.Size = new System.Drawing.Size(32, 40);
             this.ltrH.TabIndex = 7;
@@ -219,7 +222,7 @@
             this.ltrI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrI.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrI.Location = new System.Drawing.Point(440, 25);
+            this.ltrI.Location = new System.Drawing.Point(411, 32);
             this.ltrI.Name = "ltrI";
             this.ltrI.Size = new System.Drawing.Size(32, 40);
             this.ltrI.TabIndex = 8;
@@ -237,7 +240,7 @@
             this.ltrJ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrJ.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrJ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrJ.Location = new System.Drawing.Point(489, 25);
+            this.ltrJ.Location = new System.Drawing.Point(460, 32);
             this.ltrJ.Name = "ltrJ";
             this.ltrJ.Size = new System.Drawing.Size(32, 40);
             this.ltrJ.TabIndex = 9;
@@ -255,7 +258,7 @@
             this.ltrK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrK.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrK.Location = new System.Drawing.Point(538, 25);
+            this.ltrK.Location = new System.Drawing.Point(509, 32);
             this.ltrK.Name = "ltrK";
             this.ltrK.Size = new System.Drawing.Size(32, 40);
             this.ltrK.TabIndex = 10;
@@ -273,7 +276,7 @@
             this.ltrL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrL.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrL.Location = new System.Drawing.Point(587, 25);
+            this.ltrL.Location = new System.Drawing.Point(558, 32);
             this.ltrL.Name = "ltrL";
             this.ltrL.Size = new System.Drawing.Size(32, 40);
             this.ltrL.TabIndex = 11;
@@ -291,7 +294,7 @@
             this.ltrM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrM.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrM.Location = new System.Drawing.Point(636, 25);
+            this.ltrM.Location = new System.Drawing.Point(607, 32);
             this.ltrM.Name = "ltrM";
             this.ltrM.Size = new System.Drawing.Size(32, 40);
             this.ltrM.TabIndex = 12;
@@ -309,7 +312,7 @@
             this.ltrZ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrZ.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrZ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrZ.Location = new System.Drawing.Point(636, 82);
+            this.ltrZ.Location = new System.Drawing.Point(607, 89);
             this.ltrZ.Name = "ltrZ";
             this.ltrZ.Size = new System.Drawing.Size(32, 40);
             this.ltrZ.TabIndex = 25;
@@ -327,7 +330,7 @@
             this.ltrY.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrY.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrY.Location = new System.Drawing.Point(587, 82);
+            this.ltrY.Location = new System.Drawing.Point(558, 89);
             this.ltrY.Name = "ltrY";
             this.ltrY.Size = new System.Drawing.Size(32, 40);
             this.ltrY.TabIndex = 24;
@@ -345,7 +348,7 @@
             this.ltrX.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrX.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrX.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrX.Location = new System.Drawing.Point(538, 82);
+            this.ltrX.Location = new System.Drawing.Point(509, 89);
             this.ltrX.Name = "ltrX";
             this.ltrX.Size = new System.Drawing.Size(32, 40);
             this.ltrX.TabIndex = 23;
@@ -363,7 +366,7 @@
             this.ltrW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrW.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrW.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrW.Location = new System.Drawing.Point(489, 82);
+            this.ltrW.Location = new System.Drawing.Point(460, 89);
             this.ltrW.Name = "ltrW";
             this.ltrW.Size = new System.Drawing.Size(32, 40);
             this.ltrW.TabIndex = 22;
@@ -381,7 +384,7 @@
             this.ltrV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrV.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrV.Location = new System.Drawing.Point(440, 82);
+            this.ltrV.Location = new System.Drawing.Point(411, 89);
             this.ltrV.Name = "ltrV";
             this.ltrV.Size = new System.Drawing.Size(32, 40);
             this.ltrV.TabIndex = 21;
@@ -399,7 +402,7 @@
             this.ltrU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrU.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrU.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrU.Location = new System.Drawing.Point(391, 82);
+            this.ltrU.Location = new System.Drawing.Point(362, 89);
             this.ltrU.Name = "ltrU";
             this.ltrU.Size = new System.Drawing.Size(32, 40);
             this.ltrU.TabIndex = 20;
@@ -417,7 +420,7 @@
             this.ltrT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrT.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrT.Location = new System.Drawing.Point(342, 82);
+            this.ltrT.Location = new System.Drawing.Point(313, 89);
             this.ltrT.Name = "ltrT";
             this.ltrT.Size = new System.Drawing.Size(32, 40);
             this.ltrT.TabIndex = 19;
@@ -435,7 +438,7 @@
             this.ltrS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrS.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrS.Location = new System.Drawing.Point(293, 82);
+            this.ltrS.Location = new System.Drawing.Point(264, 89);
             this.ltrS.Name = "ltrS";
             this.ltrS.Size = new System.Drawing.Size(32, 40);
             this.ltrS.TabIndex = 18;
@@ -453,7 +456,7 @@
             this.ltrR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrR.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrR.Location = new System.Drawing.Point(244, 82);
+            this.ltrR.Location = new System.Drawing.Point(215, 89);
             this.ltrR.Name = "ltrR";
             this.ltrR.Size = new System.Drawing.Size(32, 40);
             this.ltrR.TabIndex = 17;
@@ -471,7 +474,7 @@
             this.ltrQ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrQ.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrQ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrQ.Location = new System.Drawing.Point(195, 82);
+            this.ltrQ.Location = new System.Drawing.Point(166, 89);
             this.ltrQ.Name = "ltrQ";
             this.ltrQ.Size = new System.Drawing.Size(32, 40);
             this.ltrQ.TabIndex = 16;
@@ -489,7 +492,7 @@
             this.ltrP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrP.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrP.Location = new System.Drawing.Point(146, 82);
+            this.ltrP.Location = new System.Drawing.Point(117, 89);
             this.ltrP.Name = "ltrP";
             this.ltrP.Size = new System.Drawing.Size(32, 40);
             this.ltrP.TabIndex = 15;
@@ -507,7 +510,7 @@
             this.ltrO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrO.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrO.Location = new System.Drawing.Point(97, 82);
+            this.ltrO.Location = new System.Drawing.Point(68, 89);
             this.ltrO.Name = "ltrO";
             this.ltrO.Size = new System.Drawing.Size(32, 40);
             this.ltrO.TabIndex = 14;
@@ -525,7 +528,7 @@
             this.ltrN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrN.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltrN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrN.Location = new System.Drawing.Point(48, 82);
+            this.ltrN.Location = new System.Drawing.Point(19, 89);
             this.ltrN.Name = "ltrN";
             this.ltrN.Size = new System.Drawing.Size(32, 40);
             this.ltrN.TabIndex = 13;
@@ -541,7 +544,7 @@
             this.ltr0.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ltr0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr0.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ltr0.Location = new System.Drawing.Point(32, 152);
+            this.ltr0.Location = new System.Drawing.Point(19, 159);
             this.ltr0.Name = "ltr0";
             this.ltr0.Size = new System.Drawing.Size(100, 100);
             this.ltr0.TabIndex = 26;
@@ -555,7 +558,7 @@
             this.ltr1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ltr1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr1.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ltr1.Location = new System.Drawing.Point(172, 152);
+            this.ltr1.Location = new System.Drawing.Point(162, 159);
             this.ltr1.Name = "ltr1";
             this.ltr1.Size = new System.Drawing.Size(100, 100);
             this.ltr1.TabIndex = 27;
@@ -569,7 +572,7 @@
             this.ltr2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ltr2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr2.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ltr2.Location = new System.Drawing.Point(312, 152);
+            this.ltr2.Location = new System.Drawing.Point(305, 159);
             this.ltr2.Name = "ltr2";
             this.ltr2.Size = new System.Drawing.Size(100, 100);
             this.ltr2.TabIndex = 28;
@@ -583,7 +586,7 @@
             this.ltr3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ltr3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr3.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ltr3.Location = new System.Drawing.Point(452, 152);
+            this.ltr3.Location = new System.Drawing.Point(448, 159);
             this.ltr3.Name = "ltr3";
             this.ltr3.Size = new System.Drawing.Size(100, 100);
             this.ltr3.TabIndex = 29;
@@ -597,7 +600,7 @@
             this.ltr4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ltr4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr4.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ltr4.Location = new System.Drawing.Point(592, 152);
+            this.ltr4.Location = new System.Drawing.Point(591, 159);
             this.ltr4.Name = "ltr4";
             this.ltr4.Size = new System.Drawing.Size(100, 100);
             this.ltr4.TabIndex = 30;
@@ -610,7 +613,7 @@
             this.lsbVocabWords.FormattingEnabled = true;
             this.lsbVocabWords.HorizontalScrollbar = true;
             this.lsbVocabWords.ItemHeight = 15;
-            this.lsbVocabWords.Location = new System.Drawing.Point(32, 266);
+            this.lsbVocabWords.Location = new System.Drawing.Point(23, 273);
             this.lsbVocabWords.MultiColumn = true;
             this.lsbVocabWords.Name = "lsbVocabWords";
             this.lsbVocabWords.Size = new System.Drawing.Size(660, 304);
@@ -620,17 +623,17 @@
             // 
             this.lblTypeListed.AutoSize = true;
             this.lblTypeListed.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTypeListed.Location = new System.Drawing.Point(474, 573);
+            this.lblTypeListed.Location = new System.Drawing.Point(465, 579);
             this.lblTypeListed.Name = "lblTypeListed";
-            this.lblTypeListed.Size = new System.Drawing.Size(218, 33);
+            this.lblTypeListed.Size = new System.Drawing.Size(226, 33);
             this.lblTypeListed.TabIndex = 32;
-            this.lblTypeListed.Text = "Words Remaining";
+            this.lblTypeListed.Text = "Targets Remaining";
             this.lblTypeListed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblRemain
             // 
             this.lblRemain.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRemain.Location = new System.Drawing.Point(263, 573);
+            this.lblRemain.Location = new System.Drawing.Point(252, 579);
             this.lblRemain.Name = "lblRemain";
             this.lblRemain.Size = new System.Drawing.Size(218, 33);
             this.lblRemain.TabIndex = 33;
@@ -641,23 +644,23 @@
             // 
             this.radWordPrev.AutoSize = true;
             this.radWordPrev.Checked = true;
-            this.radWordPrev.Location = new System.Drawing.Point(29, 580);
+            this.radWordPrev.Location = new System.Drawing.Point(23, 583);
             this.radWordPrev.Name = "radWordPrev";
-            this.radWordPrev.Size = new System.Drawing.Size(133, 19);
+            this.radWordPrev.Size = new System.Drawing.Size(341, 19);
             this.radWordPrev.TabIndex = 34;
             this.radWordPrev.TabStop = true;
-            this.radWordPrev.Text = "Most Popular Words";
+            this.radWordPrev.Text = "All Remaining Possible Target Words By Universal Popularity";
             this.radWordPrev.UseVisualStyleBackColor = true;
             this.radWordPrev.Click += new System.EventHandler(this.radClicked);
             // 
             // radLettersKilled
             // 
             this.radLettersKilled.AutoSize = true;
-            this.radLettersKilled.Location = new System.Drawing.Point(182, 580);
+            this.radLettersKilled.Location = new System.Drawing.Point(23, 634);
             this.radLettersKilled.Name = "radLettersKilled";
-            this.radLettersKilled.Size = new System.Drawing.Size(162, 19);
+            this.radLettersKilled.Size = new System.Drawing.Size(373, 19);
             this.radLettersKilled.TabIndex = 35;
-            this.radLettersKilled.Text = "150 Most Letter Deductive";
+            this.radLettersKilled.Text = "Show Highest Rated Deductive Guesses by Unused Popular Letters";
             this.radLettersKilled.UseVisualStyleBackColor = true;
             this.radLettersKilled.Click += new System.EventHandler(this.radClicked);
             // 
@@ -666,19 +669,54 @@
             this.lsbLetterKillWords.FormattingEnabled = true;
             this.lsbLetterKillWords.HorizontalScrollbar = true;
             this.lsbLetterKillWords.ItemHeight = 15;
-            this.lsbLetterKillWords.Location = new System.Drawing.Point(32, 266);
+            this.lsbLetterKillWords.Location = new System.Drawing.Point(19, 273);
             this.lsbLetterKillWords.MultiColumn = true;
             this.lsbLetterKillWords.Name = "lsbLetterKillWords";
-            this.lsbLetterKillWords.Size = new System.Drawing.Size(660, 304);
+            this.lsbLetterKillWords.Size = new System.Drawing.Size(672, 304);
             this.lsbLetterKillWords.TabIndex = 36;
             this.lsbLetterKillWords.Visible = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(23, 609);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(323, 19);
+            this.radioButton1.TabIndex = 37;
+            this.radioButton1.Text = "Show Only Most Deductive Guesses Within Target Words";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(660, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 15);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Help";
+            this.label1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Help_MouseClick);
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(654, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 75);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "?";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Help_MouseClick);
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 631);
+            this.ClientSize = new System.Drawing.Size(707, 661);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.lsbLetterKillWords);
             this.Controls.Add(this.radLettersKilled);
             this.Controls.Add(this.radWordPrev);
@@ -716,6 +754,7 @@
             this.Controls.Add(this.ltrC);
             this.Controls.Add(this.ltrB);
             this.Controls.Add(this.ltrA);
+            this.Controls.Add(this.label2);
             this.Name = "Form1";
             this.Text = "Wordle Solver";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -764,5 +803,8 @@
         private RadioButton radWordPrev;
         private RadioButton radLettersKilled;
         private ListBox lsbLetterKillWords;
+        private RadioButton radioButton1;
+        private Label label1;
+        private Label label2;
     }
 }

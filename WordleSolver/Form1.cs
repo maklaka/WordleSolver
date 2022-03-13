@@ -201,5 +201,29 @@ namespace WordleSolver
             SortAndShowWords();
         }
 
+        void FillSortedKillList(List<WordData> wd)
+        {
+            RemainingLetters.Clear();
+            foreach (Label Lbl in Alphabet)
+            {
+                if (Lbl.BackColor == Color.LightCyan)
+                {
+                    RemainingLetters.Add((char)((int)Lbl.Text[0] + 32));
+                }
+            }
+
+            foreach (WordData Word in LoadedWords)
+            {
+                Word.CalculateScores();
+            }
+
+            wd = LoadedWords.ToList();
+            wd.Sort(WordData.SortByKillableLetters);
+
+        }
+        private void Help_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
