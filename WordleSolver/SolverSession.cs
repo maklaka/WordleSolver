@@ -12,20 +12,17 @@ namespace WordleSolver
         HashSet<WordData> RemainingTargetWords = new HashSet<WordData>();
         HashSet<WordleFilter> LoggedCommands = new HashSet<WordleFilter>();
         List<Label> UIAlphaStates = new List<Label>();
-        List<Label> UITargetStates = new List<Label>();
         List<char> WorkingAlphabet = new List<char>();
         List<string> SortedWordsByPopularity = new List<string>();
         List<string> SortedWordsByLetterFrequency = new List<string>();
 
-        public SolverSession(List<Label> Alpha, List<Label> Target)
+        public SolverSession(List<Label> Alpha)
         {
             string line;
             string[] args;
             string[] EnglishDictionary = Properties.Resources.EnglishDictionary.Split('\n');
             WordData NewWord;
-
             UIAlphaStates = Alpha;
-            UITargetStates = Target;
 
             // Read the dictionary with popularity quotient line by line.  
             foreach (string DictEntry in EnglishDictionary)
@@ -62,8 +59,8 @@ namespace WordleSolver
             SortedWords.Sort(WordData.SortByPopularity);
 
             SortedWordsByPopularity.Clear();
-            foreach (WordData word in RemainingTargetWords)
-                SortedWordsByPopularity.Add(word.Text);
+            foreach (WordData word in SortedWords)
+                 SortedWordsByPopularity.Add(word.Text);
 
             return SortedWordsByPopularity;
 

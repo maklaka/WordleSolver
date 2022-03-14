@@ -15,41 +15,16 @@ namespace WordleSolver
         {
             List<string> SortedWords;
             
-            if (radWordPopularity.Checked == true)
-            {
-                SortedWords = Session.GetSortedTargetsByPopularity();
+            SortedWords = Session.GetSortedTargetsByPopularity();
 
-                lsbTargetPopularity.Items.Clear();
-                foreach (string Word in SortedWords)
-                {
-                    lsbTargetPopularity.Items.Add(Word);
-                }
-
-                lsbTargetPopularity.Visible = true;
-                lsbLetterFrequency.Visible = false;
-                lsbDeductivity.Visible = false;
-                lblRemain.Text = SortedWords.Count.ToString();
-            }
-            else if (radDeductivity.Checked == true) 
+            lsbTargetPopularity.Items.Clear();
+            foreach (string Word in SortedWords)
             {
-                lsbLetterFrequency.Visible = false;
-                lsbDeductivity.Visible = true;
-                lsbTargetPopularity.Visible = false;
-                
+                lsbTargetPopularity.Items.Add(Word);
             }
-            else if (radLetterFrequency.Checked == true)
-            {
-                lsbLetterFrequency.Items.Clear();
-                SortedWords = Session.GetSortedBestGuessesByLetterFrequency();
-                foreach (string Word in SortedWords)
-                {
-                    lsbLetterFrequency.Items.Add(Word);
-                }
 
-                lsbTargetPopularity.Visible = false;
-                lsbDeductivity.Visible = false;
-                lsbLetterFrequency.Visible = true;
-            }
+            lblRemain.Text = "(" + SortedWords.Count.ToString() + ")";
+            lblDeduct.Text = Session.GetBestGuessByDeductivity();
         }
 
        // public LoadLetterStatuses(List<char> Alphabet, List<char>)
@@ -60,13 +35,12 @@ namespace WordleSolver
                 .Where(lbl => (lbl.Tag != null) && (lbl.Tag.ToString() == "Alpha")))
                 UIAlphabetStates.Add(label);
 
-            foreach (Label label in this.Controls.OfType<Label>()
+            foreach(Label label in this.Controls.OfType<Label>()
                 .Where(lbl => (lbl.Tag != null) && (lbl.Tag.ToString() == "TargetLetter")))
                 UITargetLetterStates.Add(label);
 
-            
-            Session = new SolverSession(UIAlphabetStates, UITargetLetterStates);
-
+            Session = new SolverSession(UIAlphabetStates);
+            lblDeduct.Text = "(" + Session.GetBestGuessByDeductivity() + ")";
             SortAndShowWords(); 
         }
 
@@ -96,7 +70,6 @@ namespace WordleSolver
                 Clicked_Letter.BackColor = Color.Red;
                 Session.PerformAndLogCommand(Clicked_Letter.Text.ToLower() + "r");
                 SortAndShowWords();
-                lblRemain.Text = Session.GetBestGuessByDeductivity();
             }
         }
 
@@ -158,15 +131,29 @@ namespace WordleSolver
                 e.Effect = DragDropEffects.None;
         }
 
-        private void radClicked(object sender, EventArgs e)
-        {
-            SortAndShowWords();
-        }
-
         private void Help_MouseClick(object sender, MouseEventArgs e)
         {
 
         }
 
+        private void btnResetSolver_Click(object sender, EventArgs e)
+        {
+            Session = new SolverSession(UIAlphabetStates);
+
+            foreach(Label lbl in UIAlphabetStates)
+            {
+                lbl.BackColor = Color.LightCyan;
+            }
+
+            foreach (Label lbl in UITargetLetterStates)
+            {
+                lbl.BackColor = Color.Gray;
+                lbl.Text = "";
+            }
+
+
+            lblDeduct.Text = "(" + Session.GetBestGuessByDeductivity() + ")";
+            SortAndShowWords();
+        }
     }
 }

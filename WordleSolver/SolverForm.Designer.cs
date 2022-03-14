@@ -60,17 +60,13 @@
             this.ltr3 = new System.Windows.Forms.Label();
             this.ltr4 = new System.Windows.Forms.Label();
             this.lsbTargetPopularity = new System.Windows.Forms.ListBox();
-            this.lblTypeListed = new System.Windows.Forms.Label();
             this.lblRemain = new System.Windows.Forms.Label();
-            this.radWordPopularity = new System.Windows.Forms.RadioButton();
-            this.radLetterFrequency = new System.Windows.Forms.RadioButton();
-            this.lsbLetterFrequency = new System.Windows.Forms.ListBox();
-            this.radDeductivity = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lsbDeductivity = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblDeduct = new System.Windows.Forms.Label();
+            this.btnResetSolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ltrA
@@ -544,7 +540,7 @@
             // ltr0
             // 
             this.ltr0.AllowDrop = true;
-            this.ltr0.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ltr0.BackColor = System.Drawing.Color.Gray;
             this.ltr0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr0.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltr0.Location = new System.Drawing.Point(19, 159);
@@ -559,7 +555,7 @@
             // ltr1
             // 
             this.ltr1.AllowDrop = true;
-            this.ltr1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ltr1.BackColor = System.Drawing.Color.Gray;
             this.ltr1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr1.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltr1.Location = new System.Drawing.Point(162, 159);
@@ -574,7 +570,7 @@
             // ltr2
             // 
             this.ltr2.AllowDrop = true;
-            this.ltr2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ltr2.BackColor = System.Drawing.Color.Gray;
             this.ltr2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr2.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltr2.Location = new System.Drawing.Point(305, 159);
@@ -589,7 +585,7 @@
             // ltr3
             // 
             this.ltr3.AllowDrop = true;
-            this.ltr3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ltr3.BackColor = System.Drawing.Color.Gray;
             this.ltr3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr3.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltr3.Location = new System.Drawing.Point(448, 159);
@@ -604,7 +600,7 @@
             // ltr4
             // 
             this.ltr4.AllowDrop = true;
-            this.ltr4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ltr4.BackColor = System.Drawing.Color.Gray;
             this.ltr4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr4.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltr4.Location = new System.Drawing.Point(591, 159);
@@ -621,79 +617,21 @@
             this.lsbTargetPopularity.FormattingEnabled = true;
             this.lsbTargetPopularity.HorizontalScrollbar = true;
             this.lsbTargetPopularity.ItemHeight = 15;
-            this.lsbTargetPopularity.Location = new System.Drawing.Point(23, 273);
+            this.lsbTargetPopularity.Location = new System.Drawing.Point(23, 297);
             this.lsbTargetPopularity.MultiColumn = true;
             this.lsbTargetPopularity.Name = "lsbTargetPopularity";
-            this.lsbTargetPopularity.Size = new System.Drawing.Size(660, 304);
+            this.lsbTargetPopularity.Size = new System.Drawing.Size(660, 259);
             this.lsbTargetPopularity.TabIndex = 31;
-            // 
-            // lblTypeListed
-            // 
-            this.lblTypeListed.AutoSize = true;
-            this.lblTypeListed.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTypeListed.Location = new System.Drawing.Point(465, 579);
-            this.lblTypeListed.Name = "lblTypeListed";
-            this.lblTypeListed.Size = new System.Drawing.Size(226, 33);
-            this.lblTypeListed.TabIndex = 32;
-            this.lblTypeListed.Text = "Targets Remaining";
-            this.lblTypeListed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblRemain
             // 
-            this.lblRemain.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRemain.Location = new System.Drawing.Point(252, 579);
+            this.lblRemain.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRemain.Location = new System.Drawing.Point(577, 264);
             this.lblRemain.Name = "lblRemain";
-            this.lblRemain.Size = new System.Drawing.Size(218, 33);
+            this.lblRemain.Size = new System.Drawing.Size(114, 33);
             this.lblRemain.TabIndex = 33;
             this.lblRemain.Text = "0";
-            this.lblRemain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // radWordPopularity
-            // 
-            this.radWordPopularity.AutoSize = true;
-            this.radWordPopularity.Checked = true;
-            this.radWordPopularity.Location = new System.Drawing.Point(23, 583);
-            this.radWordPopularity.Name = "radWordPopularity";
-            this.radWordPopularity.Size = new System.Drawing.Size(341, 19);
-            this.radWordPopularity.TabIndex = 34;
-            this.radWordPopularity.TabStop = true;
-            this.radWordPopularity.Text = "All Remaining Possible Target Words By Universal Popularity";
-            this.radWordPopularity.UseVisualStyleBackColor = true;
-            this.radWordPopularity.Click += new System.EventHandler(this.radClicked);
-            // 
-            // radLetterFrequency
-            // 
-            this.radLetterFrequency.AutoSize = true;
-            this.radLetterFrequency.Location = new System.Drawing.Point(23, 634);
-            this.radLetterFrequency.Name = "radLetterFrequency";
-            this.radLetterFrequency.Size = new System.Drawing.Size(373, 19);
-            this.radLetterFrequency.TabIndex = 35;
-            this.radLetterFrequency.Text = "Show Highest Rated Deductive Guesses by Unused Popular Letters";
-            this.radLetterFrequency.UseVisualStyleBackColor = true;
-            this.radLetterFrequency.Click += new System.EventHandler(this.radClicked);
-            // 
-            // lsbLetterFrequency
-            // 
-            this.lsbLetterFrequency.FormattingEnabled = true;
-            this.lsbLetterFrequency.HorizontalScrollbar = true;
-            this.lsbLetterFrequency.ItemHeight = 15;
-            this.lsbLetterFrequency.Location = new System.Drawing.Point(19, 273);
-            this.lsbLetterFrequency.MultiColumn = true;
-            this.lsbLetterFrequency.Name = "lsbLetterFrequency";
-            this.lsbLetterFrequency.Size = new System.Drawing.Size(672, 304);
-            this.lsbLetterFrequency.TabIndex = 36;
-            this.lsbLetterFrequency.Visible = false;
-            // 
-            // radDeductivity
-            // 
-            this.radDeductivity.AutoSize = true;
-            this.radDeductivity.Location = new System.Drawing.Point(23, 609);
-            this.radDeductivity.Name = "radDeductivity";
-            this.radDeductivity.Size = new System.Drawing.Size(323, 19);
-            this.radDeductivity.TabIndex = 37;
-            this.radDeductivity.Text = "Show Only Most Deductive Guesses Within Target Words";
-            this.radDeductivity.UseVisualStyleBackColor = true;
-            this.radDeductivity.Click += new System.EventHandler(this.radClicked);
+            this.lblRemain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -718,56 +656,61 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Help_MouseClick);
             // 
-            // lsbDeductivity
-            // 
-            this.lsbDeductivity.FormattingEnabled = true;
-            this.lsbDeductivity.HorizontalScrollbar = true;
-            this.lsbDeductivity.ItemHeight = 15;
-            this.lsbDeductivity.Location = new System.Drawing.Point(19, 273);
-            this.lsbDeductivity.MultiColumn = true;
-            this.lsbDeductivity.Name = "lsbDeductivity";
-            this.lsbDeductivity.Size = new System.Drawing.Size(672, 304);
-            this.lsbDeductivity.TabIndex = 40;
-            this.lsbDeductivity.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(240, 314);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 33);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Targets Remaining";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(417, 619);
+            this.label4.Location = new System.Drawing.Point(16, 560);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(274, 33);
+            this.label4.Size = new System.Drawing.Size(350, 33);
             this.label4.TabIndex = 42;
-            this.label4.Text = "Most Deductive Word:";
+            this.label4.Text = "Most Deductive Guess Word:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(19, 268);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(555, 24);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "All Remaining Possible Target Words By Universal Popularity";
+            // 
+            // lblDeduct
+            // 
+            this.lblDeduct.AutoSize = true;
+            this.lblDeduct.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDeduct.Location = new System.Drawing.Point(370, 560);
+            this.lblDeduct.Name = "lblDeduct";
+            this.lblDeduct.Size = new System.Drawing.Size(90, 33);
+            this.lblDeduct.TabIndex = 44;
+            this.lblDeduct.Text = "deduct";
+            this.lblDeduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnResetSolver
+            // 
+            this.btnResetSolver.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnResetSolver.Location = new System.Drawing.Point(577, 564);
+            this.btnResetSolver.Name = "btnResetSolver";
+            this.btnResetSolver.Size = new System.Drawing.Size(106, 29);
+            this.btnResetSolver.TabIndex = 45;
+            this.btnResetSolver.Text = "Reset Solver";
+            this.btnResetSolver.UseVisualStyleBackColor = true;
+            this.btnResetSolver.Click += new System.EventHandler(this.btnResetSolver_Click);
             // 
             // SolverForm
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 661);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(707, 599);
+            this.Controls.Add(this.btnResetSolver);
+            this.Controls.Add(this.lblDeduct);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lsbDeductivity);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radDeductivity);
-            this.Controls.Add(this.lsbLetterFrequency);
-            this.Controls.Add(this.radLetterFrequency);
-            this.Controls.Add(this.radWordPopularity);
             this.Controls.Add(this.lblRemain);
-            this.Controls.Add(this.lblTypeListed);
             this.Controls.Add(this.lsbTargetPopularity);
             this.Controls.Add(this.ltr4);
             this.Controls.Add(this.ltr3);
@@ -801,7 +744,11 @@
             this.Controls.Add(this.ltrB);
             this.Controls.Add(this.ltrA);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.HelpButton = true;
+            this.MaximizeBox = false;
             this.Name = "SolverForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Wordle Solver";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.Form1_DragOver);
@@ -844,16 +791,12 @@
         private Label ltr3;
         private Label ltr4;
         private ListBox lsbTargetPopularity;
-        private Label lblTypeListed;
         private Label lblRemain;
-        private RadioButton radWordPopularity;
-        private RadioButton radLetterFrequency;
-        private ListBox lsbLetterFrequency;
-        private RadioButton radDeductivity;
         private Label label1;
         private Label label2;
-        private ListBox lsbDeductivity;
-        private Label label3;
         private Label label4;
+        private Label label3;
+        private Label lblDeduct;
+        private Button btnResetSolver;
     }
 }
