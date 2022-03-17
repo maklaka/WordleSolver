@@ -1,4 +1,14 @@
-﻿namespace WordleSolver
+﻿using global::System;
+using global::System.Collections.Generic;
+using global::System.Drawing;
+using global::System.IO;
+using global::System.Linq;
+using global::System.Net.Http;
+using global::System.Threading;
+using global::System.Threading.Tasks;
+using global::System.Windows.Forms;
+
+namespace WordleSolver
 {
     partial class SolverForm
     {
@@ -620,7 +630,7 @@
             this.lsbTargetPopularity.Location = new System.Drawing.Point(23, 297);
             this.lsbTargetPopularity.MultiColumn = true;
             this.lsbTargetPopularity.Name = "lsbTargetPopularity";
-            this.lsbTargetPopularity.Size = new System.Drawing.Size(660, 259);
+            this.lsbTargetPopularity.Size = new System.Drawing.Size(668, 259);
             this.lsbTargetPopularity.TabIndex = 31;
             // 
             // lblRemain
@@ -670,10 +680,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(19, 268);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(23, 275);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(555, 24);
+            this.label3.Size = new System.Drawing.Size(421, 19);
             this.label3.TabIndex = 43;
             this.label3.Text = "All Remaining Possible Target Words By Universal Popularity";
             // 
@@ -681,7 +691,7 @@
             // 
             this.lblDeduct.AutoSize = true;
             this.lblDeduct.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDeduct.Location = new System.Drawing.Point(370, 560);
+            this.lblDeduct.Location = new System.Drawing.Point(423, 560);
             this.lblDeduct.Name = "lblDeduct";
             this.lblDeduct.Size = new System.Drawing.Size(90, 33);
             this.lblDeduct.TabIndex = 44;
