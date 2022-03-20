@@ -12,22 +12,23 @@ namespace WordleSolver
 {
     internal class SolverSession
     {
-        HashSet<WordData> LoadedWords = new HashSet<WordData>();
-        HashSet<WordData> RemainingTargetWords = new HashSet<WordData>();
+        public static HashSet<WordData> LoadedWords = new HashSet<WordData>();
+        public static HashSet<WordData> TargetWords = new HashSet<WordData>();
+        static Dictionary<char, int[]> PositionQuotients = new Dictionary<char, int[]>();
+        public List<WordData> RemainingTargetWords = new List<WordData>();
         HashSet<WordleFilter> LoggedCommands = new HashSet<WordleFilter>();
-        List<Label> UIAlphaStates = new List<Label>();
-        List<char> WorkingAlphabet = new List<char>();
         List<string> SortedWordsByPopularity = new List<string>();
-        List<string> SortedWordsByLetterFrequency = new List<string>();
-        Dictionary<char, int[]> PositionQuotients = new Dictionary<char, int[]>();
 
+        public SolverSession()
+        {
+            foreach (WordData Word in TargetWords)
+                RemainingTargetWords.Add(Word);
+        }
         public SolverSession(List<Label> Alpha)
         {
-            string line;
             string[] args;
             string[] EnglishDictionary = Properties.Resources.EnglishDictionary.Split('\n');
             WordData NewWord;
-            UIAlphaStates = Alpha;
 
             // Read the dictionary with popularity quotient line by line.  
             foreach (string DictEntry in EnglishDictionary)
@@ -35,49 +36,47 @@ namespace WordleSolver
                 args = DictEntry.Split(',');
                 if (args[0].Length == 5)
                 {
-                    NewWord = new WordData(args[0], Int32.Parse(args[1]), WorkingAlphabet);
-                    LoadedWords.Add(NewWord);
-                    RemainingTargetWords.Add(NewWord);
+                    NewWord = new WordData(args[0], Int32.Parse(args[1]));
+                    LoadedWords.Add(NewWord);                    
                 }
-            } 
+            }
 
             foreach (Label lbl in Alpha)
             {
                 PositionQuotients.Add(lbl.Text.ToLower()[0], new int[5]);
             }
+
+            List<WordData> Sorted = LoadedWords.ToList();
+            Sorted.Sort((x, y) => y.Prevalance.CompareTo(x.Prevalance));
+            Sorted.RemoveRange(2500, Sorted.Count - 2500);
+            TargetWords = Sorted.ToHashSet();
+
+            foreach (WordData Word in TargetWords)
+                RemainingTargetWords.Add(Word);
         }
 
         public void PerformAndLogCommand(string Command)
         {
             WordleFilter NewCmd = new WordleFilter(Command);
-            foreach (WordData Word in RemainingTargetWords)
-            {
-                if (!NewCmd.RunFilterTest(Word.Text))
-                {
-                    RemainingTargetWords.Remove(Word);
-                }
-            }
+            RemainingTargetWords.RemoveAll(Word => (!NewCmd.RunFilterTest(Word.Text)));
             LoggedCommands.Add(NewCmd);
-
         }
 
         public List<string> GetSortedTargetsByPopularity()
         {
-            List<WordData> SortedWords;
-            
-            SortedWords = RemainingTargetWords.ToList();
-            SortedWords.Sort(WordData.SortByPopularity);
+            RemainingTargetWords.Sort(WordData.SortByPopularity);
 
             SortedWordsByPopularity.Clear();
-            foreach (WordData word in SortedWords)
+            foreach (WordData word in RemainingTargetWords)
                  SortedWordsByPopularity.Add(word.Text);
 
             return SortedWordsByPopularity;
-
         }
+
         public string GetBestGuessByDeductivity()
         {
             List<KeyValuePair<char, int>> ListofFreqs;
+            List<string> CheckWords = new List<string>(); 
             List<char> LetterKeys = new List<char>();
             List<string> BestWords = new List<string>();
             Dictionary<char,int> LettCounts = new Dictionary<char, int>();            
@@ -87,14 +86,32 @@ namespace WordleSolver
             int RunningPositionScore = 0;
             int BestPositionScore = 0;
             int PosIdx, PosCount = 5;
-            char ExamineChar = '\0';
             string BestGuess = "";
 
+            //If all the remaining words are permutations of the same letters
+            //or there is just a single word left, just return the first word as a guess
+            if (RemainingTargetWords.Count <= 5)
+            {
+                foreach (WordData Word in RemainingTargetWords)
+                {
+                    char[] chars = Word.Text.ToCharArray();
+                    Array.Sort(chars);
+                    CheckWords.Add(new string(chars));
+                }
 
-            foreach(WordData Word in RemainingTargetWords)
+                if (RemainingTargetWords.Count == 1 ||
+                    (CheckWords.Count > 1 && !CheckWords.Any(o => o != CheckWords[0])))
+                {
+                    RemainingTargetWords.Sort(WordData.SortByPopularity);
+                    return RemainingTargetWords.ToArray()[0].Text;
+                }
+            }
+
+            /*Loop through every remaining guess word */
+            foreach (WordData Word in RemainingTargetWords)
             {
                 //Get the raw letter counts across every word using only uniques
-                foreach(char letter in Word.UniqueLetters)
+                foreach (char letter in Word.UniqueLetters)
                 {
                     if(LettCounts.ContainsKey(letter))
                     {
@@ -109,16 +126,16 @@ namespace WordleSolver
                 //Tabulate letter frequency for each position of the remaining guess words
                 for (PosIdx = 0; PosIdx < PosCount; PosIdx++)
                 {
-                    ExamineChar = Word.Text[PosIdx];
-                    CharPosScores = PositionQuotients[ExamineChar];
+                    CharPosScores = PositionQuotients[Word.Text[PosIdx]];
                     CharPosScores[PosIdx]++;
                 }
+
             }
 
             //Remove guess target letters that are in every remaining word.
             //we know those already and want the set of other letters that
             //covers the most words
-            foreach(KeyValuePair<char,int> KeyVal in LettCounts)
+            foreach (KeyValuePair<char,int> KeyVal in LettCounts)
             {
                 if (KeyVal.Value == RemainingTargetWords.Count)
                 {
@@ -175,8 +192,7 @@ namespace WordleSolver
                 RunningPositionScore = 0;
                 for (PosIdx = 0; PosIdx < PosCount; PosIdx++)
                 {
-                    ExamineChar = BestWord[PosIdx];
-                    CharPosScores = PositionQuotients[ExamineChar];
+                    CharPosScores = PositionQuotients[BestWord[PosIdx]];
                     RunningPositionScore += CharPosScores[PosIdx];
                 }
 
@@ -188,37 +204,6 @@ namespace WordleSolver
             }
 
             return BestGuess;
-        }
-
-        public List<string> GetSortedBestGuessesByLetterFrequency()
-        {
-            List<WordData> SortedWords;
-
-            WorkingAlphabet.Clear();
-            foreach (Label Lbl in UIAlphaStates)
-            {
-                if (Lbl.BackColor == Color.LightCyan)
-                {
-                    WorkingAlphabet.Add((Lbl.Text.ToLower()[0]));
-                }
-            }
-
-            foreach (WordData Word in LoadedWords)
-            {
-                Word.CalculateScores();
-            }
-
-            SortedWords = LoadedWords.ToList();
-            SortedWords.Sort(WordData.SortByLetterFrequency);
-            SortedWords.RemoveRange(150, LoadedWords.Count - 150);
-
-            SortedWordsByLetterFrequency.Clear();
-            foreach (WordData Word in SortedWords)
-            {
-                SortedWordsByLetterFrequency.Add(Word.Text);
-            }
-
-            return SortedWordsByLetterFrequency;
         }
     }
 }

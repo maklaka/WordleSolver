@@ -14,80 +14,24 @@ namespace WordleSolver
     internal class WordData
     {
         private Dictionary<char, int> LetterFrequencies;
-        string wordText;
-        int prevalance;
-        List<char> RemainingLetters;
-        public HashSet<char> UniqueLetters;
-        int uniqueCharsInAlphabet;
-        int letterFreqScore;
-        int positionScore;
+        private string wordText;
+        private int prevalance;
+        private HashSet<char> uniqueLetters;
 
-        public WordData(string Word, int Pre, List<char> Alpha)
+        public WordData(string Word, int Pre)
         {
             wordText = Word;
             prevalance = Pre;
-            UniqueLetters = new HashSet<char>(Word); //Get the set of unique letters, no repeats
-            RemainingLetters = Alpha;
-
-            LetterFrequencies = new Dictionary<char, int>()
-            {
-                { 'e', 1160 }, { 'a', 849 }, { 'r', 758 }, { 'i', 754 }, { 'o', 716 }, { 't', 695 },
-                { 'n', 665 }, { 's', 573 }, { 'l', 549 }, { 'c', 454 }, { 'u', 363 }, { 'd', 384 },
-                { 'p', 317 }, { 'm', 301 }, { 'h', 300 }, { 'g', 247 }, { 'b', 207 }, { 'f', 181 },
-                { 'y', 177 }, { 'w', 129 }, { 'k', 110 }, { 'v', 100 }, { 'x', 29 }, { 'z', 27 },
-                { 'j', 19 }, { 'q', 19 }
-            };
-        }
-
-        public void CalculateScores()
-        {
-            int mult = 0;
-            uniqueCharsInAlphabet = 0;
-            letterFreqScore = 0;
-            foreach (char SlimAlphaChar in RemainingLetters)
-            {
-                if (UniqueLetters.Contains(SlimAlphaChar))
-                {
-                    uniqueCharsInAlphabet++;
-                    LetterFrequencies.TryGetValue(SlimAlphaChar, out mult);
-                    letterFreqScore += mult;                    
-                }
-            }
-
-
-        }
-        public static int SortByLetterFrequency(WordData a, WordData b)
-        {
-            if (a.uniqueCharsInAlphabet < b.uniqueCharsInAlphabet)
-            {
-                return 1;
-            }
-            else if (a.uniqueCharsInAlphabet > b.uniqueCharsInAlphabet)
-            {
-                return -1;
-            }
-            else
-            {
-                if (a.letterFreqScore < b.letterFreqScore)
-                {
-                    return 1;
-                }
-                else if (a.letterFreqScore > b.letterFreqScore)
-                {
-                    return -1;
-                }
-                else
-                    return 0;
-            }
+            uniqueLetters = new HashSet<char>(Word); //Get the set of unique letters, no repeats
         }
 
         public static int SortByPopularity(WordData a, WordData b)
         {
-            if (a.prevalance < b.prevalance)
+            if (a.Prevalance < b.Prevalance)
             {
                 return 1;
             }
-            else if (a.prevalance > b.prevalance)
+            else if (a.Prevalance > b.Prevalance)
             {
                 return -1;
             }
@@ -98,6 +42,7 @@ namespace WordleSolver
         }
 
         public string Text { get => wordText;}
-
+        public int Prevalance { get => prevalance;}
+        public HashSet<char> UniqueLetters { get => uniqueLetters;}
     }
 }

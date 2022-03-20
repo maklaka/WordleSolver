@@ -142,12 +142,51 @@ namespace WordleSolver
 
         private void Help_MouseClick(object sender, MouseEventArgs e)
         {
+            int ChIdx = 0, ChCount = 5, GuessCount = 0, OnePop = 0, TwoPop = 0, MissedWords = 0 ;         
+            List<int> GuessSteps = new List<int>();
+            string GuessWord = "";
+            foreach (WordData TestWord in SolverSession.TargetWords)
+            {
+                GuessWord = Session.GetBestGuessByDeductivity();
+                while (GuessWord != TestWord.Text && GuessCount != 6)
+                {                   
+                    for (ChIdx = 0; ChIdx < ChCount; ChIdx++)
+                    {
+                        if (GuessWord[ChIdx] == TestWord.Text[ChIdx])
+                        {
+                            Session.PerformAndLogCommand(GuessWord[ChIdx].ToString() + 'g' + (ChIdx).ToString());
+                        }
+                        else if (TestWord.Text.Contains(GuessWord[ChIdx]))
+                        {
+                            Session.PerformAndLogCommand(GuessWord[ChIdx].ToString() + 'y' + (ChIdx).ToString());
+                        }
+                        else
+                        {
+                            Session.PerformAndLogCommand(GuessWord[ChIdx].ToString() + 'r');
+                        }
+                    }
 
+                    GuessCount++;
+          
+                        GuessWord = Session.GetBestGuessByDeductivity();
+                   
+                }
+                if(GuessCount == 6)
+                {
+                    MissedWords++;
+                }
+
+                GuessSteps.Add(GuessCount);
+                GuessCount = 1;
+                Session = new SolverSession();
+            }
+
+            label4.Text = ((float)GuessSteps.Sum() / GuessSteps.Count).ToString() + "Missed count:" + MissedWords.ToString();
         }
 
         private void btnResetSolver_Click(object sender, EventArgs e)
         {
-            Session = new SolverSession(UIAlphabetStates);
+            Session = new SolverSession();
 
             foreach(Label lbl in UIAlphabetStates)
             {
