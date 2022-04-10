@@ -7,6 +7,7 @@ using global::System.Net.Http;
 using global::System.Threading;
 using global::System.Threading.Tasks;
 using global::System.Windows.Forms;
+using Props = WordleSolverMigrated.Properties;
 
 namespace WordleSolver
 {
@@ -14,6 +15,7 @@ namespace WordleSolver
     {
         public static HashSet<WordData> LoadedWords = new HashSet<WordData>();
         public static HashSet<WordData> TargetWords = new HashSet<WordData>();
+
         static Dictionary<char, int[]> PositionQuotients = new Dictionary<char, int[]>();
         public List<WordData> RemainingTargetWords = new List<WordData>();
         HashSet<WordleFilter> LoggedCommands = new HashSet<WordleFilter>();
@@ -27,7 +29,7 @@ namespace WordleSolver
         public SolverSession(List<Label> Alpha)
         {
             string[] args;
-            string[] EnglishDictionary = Properties.Resources.EnglishDictionary.Split('\n');
+            string[] EnglishDictionary = Props.Resources.EnglishDictionary.Split('\n');
             WordData NewWord;
 
             // Read the dictionary with popularity quotient line by line.  
@@ -49,10 +51,11 @@ namespace WordleSolver
             List<WordData> Sorted = LoadedWords.ToList();
             Sorted.Sort((x, y) => y.Prevalance.CompareTo(x.Prevalance));
             Sorted.RemoveRange(2500, Sorted.Count - 2500);
-            TargetWords = Sorted.ToHashSet();
-
-            foreach (WordData Word in TargetWords)
+            foreach (WordData Word in Sorted)
+            {
+                TargetWords.Add(Word);
                 RemainingTargetWords.Add(Word);
+            }   
         }
 
         public void PerformAndLogCommand(string Command)
@@ -135,12 +138,10 @@ namespace WordleSolver
             //Remove guess target letters that are in every remaining word.
             //we know those already and want the set of other letters that
             //covers the most words
-            foreach (KeyValuePair<char,int> KeyVal in LettCounts)
+            var toRemove = LettCounts.Where(kvp => kvp.Value == RemainingTargetWords.Count).ToList();
+            foreach (var KeyVal in toRemove)
             {
-                if (KeyVal.Value == RemainingTargetWords.Count)
-                {
-                    LettCounts.Remove(KeyVal.Key);
-                }
+                LettCounts.Remove(KeyVal.Key);
             }
 
             //Sort the frequency list from most common to least common letters
