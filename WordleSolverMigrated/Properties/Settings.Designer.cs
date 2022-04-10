@@ -22,17 +22,5 @@ namespace WordleSolverMigrated.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string derp {
-            get {
-                return ((string)(this["derp"]));
-            }
-            set {
-                this["derp"] = value;
-            }
-        }
     }
 }

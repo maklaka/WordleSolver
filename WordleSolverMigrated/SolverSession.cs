@@ -18,7 +18,7 @@ namespace WordleSolver
 
         static Dictionary<char, int[]> PositionQuotients = new Dictionary<char, int[]>();
         public List<WordData> RemainingTargetWords = new List<WordData>();
-        HashSet<WordleFilter> LoggedCommands = new HashSet<WordleFilter>();
+        HashSet<WordleFilterCmd> LoggedCommands = new HashSet<WordleFilterCmd>();
         List<string> SortedWordsByPopularity = new List<string>();
 
         public SolverSession()
@@ -60,7 +60,7 @@ namespace WordleSolver
 
         public void PerformAndLogCommand(string Command)
         {
-            WordleFilter NewCmd = new WordleFilter(Command);
+            WordleFilterCmd NewCmd = new WordleFilterCmd(Command);
             RemainingTargetWords.RemoveAll(Word => (!NewCmd.RunFilterTest(Word.Text)));
             LoggedCommands.Add(NewCmd);
         }
@@ -74,6 +74,18 @@ namespace WordleSolver
                  SortedWordsByPopularity.Add(word.Text);
 
             return SortedWordsByPopularity;
+        }
+
+        public void UndoRedLetter(char ch)
+        {
+            RemainingTargetWords.Clear();
+            foreach (WordData Word in TargetWords)
+                RemainingTargetWords.Add(Word);
+
+            LoggedCommands.RemoveWhere(Filter => Filter.CmdString == (ch.ToString() + "r"));
+
+            foreach (WordleFilterCmd Cmd in LoggedCommands)
+                RemainingTargetWords.RemoveAll(Word => (!Cmd.RunFilterTest(Word.Text)));         
         }
 
         public string GetBestGuessByDeductivity()

@@ -10,17 +10,15 @@ using global::System.Windows.Forms;
 
 namespace WordleSolver
 {
-
     internal class WordData
     {
-        private Dictionary<char, int> LetterFrequencies;
-        private string wordText;
+        private string text;
         private int prevalance;
         private HashSet<char> uniqueLetters;
 
         public WordData(string Word, int Pre)
         {
-            wordText = Word;
+            text = Word;
             prevalance = Pre;
             uniqueLetters = new HashSet<char>(Word); //Get the set of unique letters, no repeats
         }
@@ -41,7 +39,7 @@ namespace WordleSolver
             }
         }
 
-        public string Text { get => wordText;}
+        public string Text { get => text;}
         public int Prevalance { get => prevalance;}
         public HashSet<char> UniqueLetters { get => uniqueLetters;}
     }

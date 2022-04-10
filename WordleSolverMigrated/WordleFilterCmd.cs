@@ -12,7 +12,7 @@ namespace WordleSolver
 {
     internal interface IExecutableCmd
     {
-        bool RunCommand(string Word,char Letter,int Pos);
+        bool RunCommand(string Word, char Letter, int Pos);
     }
 
     internal class WCmdRed : IExecutableCmd
@@ -53,35 +53,39 @@ namespace WordleSolver
             return ret;
         }
     }
-    internal class WordleFilter
+    internal class WordleFilterCmd
     {
         int Position;
         char Letter;
         IExecutableCmd Command;
+        string cmdString;
 
-        public WordleFilter(string InputCommand)
+        public WordleFilterCmd(string InputCommand)
         {
+            cmdString = InputCommand;
             this.Letter = (char)(InputCommand[0]);
 
             if (InputCommand[1] == 'r')
+            {
                 this.Command = new WCmdRed();
+            }
             else if (InputCommand[1] == 'y')
             {
                 this.Command = new WCmdYellow();
-                this.Position = InputCommand[2] - 48;
+                this.Position = int.Parse(InputCommand[2].ToString());
             }
-            else 
+            else
             {
                 this.Command = new WCmdGreen();
-                this.Position = InputCommand[2] - 48;
+                this.Position = int.Parse(InputCommand[2].ToString());
             }
         }
+
+        public string CmdString { get => cmdString; }
 
         public bool RunFilterTest(string Word)
         {
             return this.Command.RunCommand(Word, this.Letter, this.Position);
         }
-
-    
     }
 }

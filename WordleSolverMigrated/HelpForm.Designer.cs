@@ -59,7 +59,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(280, 115);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Left click on the letters to cycle them between green and yellow";
+            this.label1.Text = "Left click on the letters to cycle them between green and yellow.";
             // 
             // pictureBox2
             // 
@@ -88,7 +88,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 80);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Drag and drop letters into the gray letter positions of the word";
+            this.label2.Text = "Drag and drop letters into the gray letter positions of the word.";
             // 
             // pictureBox4
             // 
@@ -107,7 +107,8 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(293, 101);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Right-click on letters to mark them red and absent from the target word";
+            this.label3.Text = "Right-click on letters to mark them red and absent from the target word. Left cli" +
+    "ck reds to undo.";
             // 
             // HelpForm
             // 

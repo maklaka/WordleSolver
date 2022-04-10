@@ -59,18 +59,21 @@ namespace WordleSolver
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 if (Clicked_Letter.BackColor == Color.LightCyan ||
-                    Clicked_Letter.BackColor == Color.Yellow)
-                {
-                    Clicked_Letter.BackColor = Color.Green;
-                }
-                else if (Clicked_Letter.BackColor == Color.Green)
+                    Clicked_Letter.BackColor == Color.Green)
                 {
                     Clicked_Letter.BackColor = Color.Yellow;
+                    
+                }
+                else if (Clicked_Letter.BackColor == Color.Yellow)
+                {
+                    Clicked_Letter.BackColor = Color.Green;
                 }
                 else if (Clicked_Letter.BackColor == Color.Red)
                 {
                     //TODO a red is being cancelled! Clear stuff as necessary
-                    Clicked_Letter.BackColor = Color.Green;
+                    Clicked_Letter.BackColor = Color.LightCyan;
+                    Session.UndoRedLetter(Clicked_Letter.Text.ToLower()[0]);
+                    SortAndShowWords();
                 }
             }
             else //right mouse click. red letter requested
@@ -111,15 +114,14 @@ namespace WordleSolver
                 if (cmd == 'g')
                 {
                     TargetLabel.BackColor = Color.Green;
-                    TargetLabel.Text = letter.ToString();
-                    Session.PerformAndLogCommand(ComboData + TargetLabel.Name[3].ToString());
                 }
                 else if (cmd == 'y')
                 {
                     TargetLabel.BackColor = Color.Yellow;
-                    TargetLabel.Text += letter.ToString();
-                    Session.PerformAndLogCommand(ComboData + TargetLabel.Name[3].ToString());
                 }
+
+                TargetLabel.Text += Char.ToUpper(letter).ToString();
+                Session.PerformAndLogCommand(ComboData + TargetLabel.Name[3].ToString());
 
                 SortAndShowWords();
             }
@@ -153,7 +155,6 @@ namespace WordleSolver
                 lbl.BackColor = Color.Gray;
                 lbl.Text = "";
             }
-
 
             lblDeduct.Text = "(" + Session.GetBestGuessByDeductivity() + ")";
             SortAndShowWords();

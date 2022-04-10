@@ -88,7 +88,7 @@ namespace WordleSolver
             this.ltrA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrA.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrA.Location = new System.Drawing.Point(16, 28);
+            this.ltrA.Location = new System.Drawing.Point(16, 10);
             this.ltrA.Name = "ltrA";
             this.ltrA.Size = new System.Drawing.Size(27, 35);
             this.ltrA.TabIndex = 0;
@@ -106,7 +106,7 @@ namespace WordleSolver
             this.ltrB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrB.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrB.Location = new System.Drawing.Point(58, 28);
+            this.ltrB.Location = new System.Drawing.Point(58, 10);
             this.ltrB.Name = "ltrB";
             this.ltrB.Size = new System.Drawing.Size(27, 35);
             this.ltrB.TabIndex = 1;
@@ -124,7 +124,7 @@ namespace WordleSolver
             this.ltrC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrC.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrC.Location = new System.Drawing.Point(100, 28);
+            this.ltrC.Location = new System.Drawing.Point(100, 10);
             this.ltrC.Name = "ltrC";
             this.ltrC.Size = new System.Drawing.Size(27, 35);
             this.ltrC.TabIndex = 2;
@@ -142,7 +142,7 @@ namespace WordleSolver
             this.ltrD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrD.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrD.Location = new System.Drawing.Point(143, 28);
+            this.ltrD.Location = new System.Drawing.Point(143, 10);
             this.ltrD.Name = "ltrD";
             this.ltrD.Size = new System.Drawing.Size(27, 35);
             this.ltrD.TabIndex = 3;
@@ -160,7 +160,7 @@ namespace WordleSolver
             this.ltrE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrE.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrE.Location = new System.Drawing.Point(184, 28);
+            this.ltrE.Location = new System.Drawing.Point(184, 10);
             this.ltrE.Name = "ltrE";
             this.ltrE.Size = new System.Drawing.Size(27, 35);
             this.ltrE.TabIndex = 4;
@@ -178,7 +178,7 @@ namespace WordleSolver
             this.ltrF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrF.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrF.Location = new System.Drawing.Point(226, 28);
+            this.ltrF.Location = new System.Drawing.Point(226, 10);
             this.ltrF.Name = "ltrF";
             this.ltrF.Size = new System.Drawing.Size(27, 35);
             this.ltrF.TabIndex = 5;
@@ -196,7 +196,7 @@ namespace WordleSolver
             this.ltrG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrG.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrG.Location = new System.Drawing.Point(268, 28);
+            this.ltrG.Location = new System.Drawing.Point(268, 10);
             this.ltrG.Name = "ltrG";
             this.ltrG.Size = new System.Drawing.Size(27, 35);
             this.ltrG.TabIndex = 6;
@@ -214,7 +214,7 @@ namespace WordleSolver
             this.ltrH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrH.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrH.Location = new System.Drawing.Point(310, 28);
+            this.ltrH.Location = new System.Drawing.Point(310, 10);
             this.ltrH.Name = "ltrH";
             this.ltrH.Size = new System.Drawing.Size(27, 35);
             this.ltrH.TabIndex = 7;
@@ -232,7 +232,7 @@ namespace WordleSolver
             this.ltrI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrI.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrI.Location = new System.Drawing.Point(352, 28);
+            this.ltrI.Location = new System.Drawing.Point(352, 10);
             this.ltrI.Name = "ltrI";
             this.ltrI.Size = new System.Drawing.Size(27, 35);
             this.ltrI.TabIndex = 8;
@@ -250,7 +250,7 @@ namespace WordleSolver
             this.ltrJ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrJ.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrJ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrJ.Location = new System.Drawing.Point(394, 28);
+            this.ltrJ.Location = new System.Drawing.Point(394, 10);
             this.ltrJ.Name = "ltrJ";
             this.ltrJ.Size = new System.Drawing.Size(27, 35);
             this.ltrJ.TabIndex = 9;
@@ -268,7 +268,7 @@ namespace WordleSolver
             this.ltrK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrK.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrK.Location = new System.Drawing.Point(436, 28);
+            this.ltrK.Location = new System.Drawing.Point(436, 10);
             this.ltrK.Name = "ltrK";
             this.ltrK.Size = new System.Drawing.Size(27, 35);
             this.ltrK.TabIndex = 10;
@@ -286,7 +286,7 @@ namespace WordleSolver
             this.ltrL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrL.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrL.Location = new System.Drawing.Point(478, 28);
+            this.ltrL.Location = new System.Drawing.Point(478, 10);
             this.ltrL.Name = "ltrL";
             this.ltrL.Size = new System.Drawing.Size(27, 35);
             this.ltrL.TabIndex = 11;
@@ -304,7 +304,7 @@ namespace WordleSolver
             this.ltrM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrM.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrM.Location = new System.Drawing.Point(520, 28);
+            this.ltrM.Location = new System.Drawing.Point(520, 10);
             this.ltrM.Name = "ltrM";
             this.ltrM.Size = new System.Drawing.Size(27, 35);
             this.ltrM.TabIndex = 12;
@@ -322,7 +322,7 @@ namespace WordleSolver
             this.ltrZ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrZ.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrZ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrZ.Location = new System.Drawing.Point(520, 77);
+            this.ltrZ.Location = new System.Drawing.Point(520, 59);
             this.ltrZ.Name = "ltrZ";
             this.ltrZ.Size = new System.Drawing.Size(27, 35);
             this.ltrZ.TabIndex = 25;
@@ -340,7 +340,7 @@ namespace WordleSolver
             this.ltrY.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrY.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrY.Location = new System.Drawing.Point(478, 77);
+            this.ltrY.Location = new System.Drawing.Point(478, 59);
             this.ltrY.Name = "ltrY";
             this.ltrY.Size = new System.Drawing.Size(27, 35);
             this.ltrY.TabIndex = 24;
@@ -358,7 +358,7 @@ namespace WordleSolver
             this.ltrX.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrX.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrX.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrX.Location = new System.Drawing.Point(436, 77);
+            this.ltrX.Location = new System.Drawing.Point(436, 59);
             this.ltrX.Name = "ltrX";
             this.ltrX.Size = new System.Drawing.Size(27, 35);
             this.ltrX.TabIndex = 23;
@@ -376,7 +376,7 @@ namespace WordleSolver
             this.ltrW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrW.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrW.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrW.Location = new System.Drawing.Point(394, 77);
+            this.ltrW.Location = new System.Drawing.Point(394, 59);
             this.ltrW.Name = "ltrW";
             this.ltrW.Size = new System.Drawing.Size(27, 35);
             this.ltrW.TabIndex = 22;
@@ -394,7 +394,7 @@ namespace WordleSolver
             this.ltrV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrV.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrV.Location = new System.Drawing.Point(352, 77);
+            this.ltrV.Location = new System.Drawing.Point(352, 59);
             this.ltrV.Name = "ltrV";
             this.ltrV.Size = new System.Drawing.Size(27, 35);
             this.ltrV.TabIndex = 21;
@@ -412,7 +412,7 @@ namespace WordleSolver
             this.ltrU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrU.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrU.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrU.Location = new System.Drawing.Point(310, 77);
+            this.ltrU.Location = new System.Drawing.Point(310, 59);
             this.ltrU.Name = "ltrU";
             this.ltrU.Size = new System.Drawing.Size(27, 35);
             this.ltrU.TabIndex = 20;
@@ -430,7 +430,7 @@ namespace WordleSolver
             this.ltrT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrT.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrT.Location = new System.Drawing.Point(268, 77);
+            this.ltrT.Location = new System.Drawing.Point(268, 59);
             this.ltrT.Name = "ltrT";
             this.ltrT.Size = new System.Drawing.Size(27, 35);
             this.ltrT.TabIndex = 19;
@@ -448,7 +448,7 @@ namespace WordleSolver
             this.ltrS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrS.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrS.Location = new System.Drawing.Point(226, 77);
+            this.ltrS.Location = new System.Drawing.Point(226, 59);
             this.ltrS.Name = "ltrS";
             this.ltrS.Size = new System.Drawing.Size(27, 35);
             this.ltrS.TabIndex = 18;
@@ -466,7 +466,7 @@ namespace WordleSolver
             this.ltrR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrR.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrR.Location = new System.Drawing.Point(184, 77);
+            this.ltrR.Location = new System.Drawing.Point(184, 59);
             this.ltrR.Name = "ltrR";
             this.ltrR.Size = new System.Drawing.Size(27, 35);
             this.ltrR.TabIndex = 17;
@@ -484,7 +484,7 @@ namespace WordleSolver
             this.ltrQ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrQ.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrQ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrQ.Location = new System.Drawing.Point(142, 77);
+            this.ltrQ.Location = new System.Drawing.Point(142, 59);
             this.ltrQ.Name = "ltrQ";
             this.ltrQ.Size = new System.Drawing.Size(27, 35);
             this.ltrQ.TabIndex = 16;
@@ -502,7 +502,7 @@ namespace WordleSolver
             this.ltrP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrP.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrP.Location = new System.Drawing.Point(100, 77);
+            this.ltrP.Location = new System.Drawing.Point(100, 59);
             this.ltrP.Name = "ltrP";
             this.ltrP.Size = new System.Drawing.Size(27, 35);
             this.ltrP.TabIndex = 15;
@@ -520,7 +520,7 @@ namespace WordleSolver
             this.ltrO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrO.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrO.Location = new System.Drawing.Point(58, 77);
+            this.ltrO.Location = new System.Drawing.Point(58, 59);
             this.ltrO.Name = "ltrO";
             this.ltrO.Size = new System.Drawing.Size(27, 35);
             this.ltrO.TabIndex = 14;
@@ -538,7 +538,7 @@ namespace WordleSolver
             this.ltrN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ltrN.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.ltrN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ltrN.Location = new System.Drawing.Point(16, 77);
+            this.ltrN.Location = new System.Drawing.Point(16, 59);
             this.ltrN.Name = "ltrN";
             this.ltrN.Size = new System.Drawing.Size(27, 35);
             this.ltrN.TabIndex = 13;
@@ -554,7 +554,7 @@ namespace WordleSolver
             this.ltr0.BackColor = System.Drawing.Color.Gray;
             this.ltr0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr0.Font = new System.Drawing.Font("Times New Roman", 30F);
-            this.ltr0.Location = new System.Drawing.Point(16, 138);
+            this.ltr0.Location = new System.Drawing.Point(16, 115);
             this.ltr0.Name = "ltr0";
             this.ltr0.Size = new System.Drawing.Size(86, 87);
             this.ltr0.TabIndex = 26;
@@ -569,7 +569,7 @@ namespace WordleSolver
             this.ltr1.BackColor = System.Drawing.Color.Gray;
             this.ltr1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr1.Font = new System.Drawing.Font("Times New Roman", 30F);
-            this.ltr1.Location = new System.Drawing.Point(139, 138);
+            this.ltr1.Location = new System.Drawing.Point(139, 115);
             this.ltr1.Name = "ltr1";
             this.ltr1.Size = new System.Drawing.Size(86, 87);
             this.ltr1.TabIndex = 27;
@@ -584,7 +584,7 @@ namespace WordleSolver
             this.ltr2.BackColor = System.Drawing.Color.Gray;
             this.ltr2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr2.Font = new System.Drawing.Font("Times New Roman", 30F);
-            this.ltr2.Location = new System.Drawing.Point(261, 138);
+            this.ltr2.Location = new System.Drawing.Point(261, 115);
             this.ltr2.Name = "ltr2";
             this.ltr2.Size = new System.Drawing.Size(86, 87);
             this.ltr2.TabIndex = 28;
@@ -599,7 +599,7 @@ namespace WordleSolver
             this.ltr3.BackColor = System.Drawing.Color.Gray;
             this.ltr3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr3.Font = new System.Drawing.Font("Times New Roman", 30F);
-            this.ltr3.Location = new System.Drawing.Point(384, 138);
+            this.ltr3.Location = new System.Drawing.Point(384, 115);
             this.ltr3.Name = "ltr3";
             this.ltr3.Size = new System.Drawing.Size(86, 87);
             this.ltr3.TabIndex = 29;
@@ -614,7 +614,7 @@ namespace WordleSolver
             this.ltr4.BackColor = System.Drawing.Color.Gray;
             this.ltr4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ltr4.Font = new System.Drawing.Font("Times New Roman", 30F);
-            this.ltr4.Location = new System.Drawing.Point(507, 138);
+            this.ltr4.Location = new System.Drawing.Point(507, 115);
             this.ltr4.Name = "ltr4";
             this.ltr4.Size = new System.Drawing.Size(86, 87);
             this.ltr4.TabIndex = 30;
@@ -627,26 +627,26 @@ namespace WordleSolver
             // 
             this.lsbTargetPopularity.FormattingEnabled = true;
             this.lsbTargetPopularity.HorizontalScrollbar = true;
-            this.lsbTargetPopularity.Location = new System.Drawing.Point(20, 257);
+            this.lsbTargetPopularity.Location = new System.Drawing.Point(16, 239);
             this.lsbTargetPopularity.MultiColumn = true;
             this.lsbTargetPopularity.Name = "lsbTargetPopularity";
-            this.lsbTargetPopularity.Size = new System.Drawing.Size(573, 225);
+            this.lsbTargetPopularity.Size = new System.Drawing.Size(577, 225);
             this.lsbTargetPopularity.TabIndex = 31;
             // 
             // lblRemain
             // 
             this.lblRemain.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblRemain.Location = new System.Drawing.Point(495, 228);
+            this.lblRemain.Location = new System.Drawing.Point(491, 210);
             this.lblRemain.Name = "lblRemain";
             this.lblRemain.Size = new System.Drawing.Size(98, 29);
             this.lblRemain.TabIndex = 33;
             this.lblRemain.Text = "0";
-            this.lblRemain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRemain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(566, 84);
+            this.label1.Location = new System.Drawing.Point(566, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 38;
@@ -657,7 +657,7 @@ namespace WordleSolver
             this.btnHelp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 27.75F);
-            this.btnHelp.Location = new System.Drawing.Point(561, 39);
+            this.btnHelp.Location = new System.Drawing.Point(561, 21);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(39, 65);
             this.btnHelp.TabIndex = 39;
@@ -669,7 +669,7 @@ namespace WordleSolver
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 485);
+            this.label4.Location = new System.Drawing.Point(14, 467);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(332, 31);
             this.label4.TabIndex = 42;
@@ -680,17 +680,17 @@ namespace WordleSolver
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(20, 234);
+            this.label3.Location = new System.Drawing.Point(13, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(421, 19);
+            this.label3.Size = new System.Drawing.Size(399, 19);
             this.label3.TabIndex = 43;
-            this.label3.Text = "All Remaining Possible Target Words By Universal Popularity";
+            this.label3.Text = "All Remaining Possible Target Words By Usage Popularity";
             // 
             // lblDeduct
             // 
             this.lblDeduct.AutoSize = true;
             this.lblDeduct.Font = new System.Drawing.Font("Times New Roman", 21.75F);
-            this.lblDeduct.Location = new System.Drawing.Point(361, 482);
+            this.lblDeduct.Location = new System.Drawing.Point(354, 465);
             this.lblDeduct.Name = "lblDeduct";
             this.lblDeduct.Size = new System.Drawing.Size(90, 33);
             this.lblDeduct.TabIndex = 44;
@@ -700,7 +700,7 @@ namespace WordleSolver
             // btnResetSolver
             // 
             this.btnResetSolver.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnResetSolver.Location = new System.Drawing.Point(480, 489);
+            this.btnResetSolver.Location = new System.Drawing.Point(480, 471);
             this.btnResetSolver.Name = "btnResetSolver";
             this.btnResetSolver.Size = new System.Drawing.Size(108, 25);
             this.btnResetSolver.TabIndex = 45;
@@ -713,7 +713,7 @@ namespace WordleSolver
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 519);
+            this.ClientSize = new System.Drawing.Size(606, 502);
             this.Controls.Add(this.btnResetSolver);
             this.Controls.Add(this.lblDeduct);
             this.Controls.Add(this.label3);

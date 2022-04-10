@@ -64,19 +64,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Combinations.cs" />
-    <Compile Include="GenerateOption.cs" />
+    <Compile Include="CombinatoricsFiles\Combinations.cs" />
+    <Compile Include="CombinatoricsFiles\GenerateOption.cs" />
     <Compile Include="HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IMetaCollection.cs" />
-    <Compile Include="Permutations.cs" />
+    <Compile Include="CombinatoricsFiles\IMetaCollection.cs" />
+    <Compile Include="CombinatoricsFiles\Permutations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmallPrimeUtility.cs" />
+    <Compile Include="CombinatoricsFiles\SmallPrimeUtility.cs" />
     <Compile Include="SolverForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,9 +84,9 @@
       <DependentUpon>SolverForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SolverSession.cs" />
-    <Compile Include="Variations.cs" />
+    <Compile Include="CombinatoricsFiles\Variations.cs" />
     <Compile Include="WordData.cs" />
-    <Compile Include="WordleFilter.cs" />
+    <Compile Include="WordleFilterCmd.cs" />
     <EmbeddedResource Include="HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,7 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="WordleSolverIco.ico" />
-    <Content Include="WordleSolverIco.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
